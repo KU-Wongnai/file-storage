@@ -9,7 +9,7 @@ class FileController extends Controller
     public function saveFile(Request $request) {
         
         $request->validate([
-            'file' => ['required', 'mimes:jpg,png,jpeg'],
+            'file' => ['required', 'file', 'mimes:jpeg,png,jpg,gif,svg','max:2048'],
             'file_name' => ['required', 'string']
         ]);
 
