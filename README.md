@@ -4,9 +4,17 @@ This service serve as a file storage for KU Wongnai project. It store images suc
 
 ## Basic Usage
 
+### Upload single file
+
 ![preview](docs/preview.png)
 
-Make a POST request to http://localhost:8091/api/upload with form-data body. The key must be `file` and the value must be a file with type of `jpeg,png,jpg,gif,svg` and not exceed 2 MB, then specify `file_name` that you want to save the file as.
+Make a POST request to http://localhost:8093/api/upload with form-data body. The key must be `file` and the value must be a file with type of `jpeg,png,jpg,gif,svg` and not exceed 2 MB, then specify `file_name` that you want to save the file as.
+
+### Upload multiple files
+
+![preview](docs/preview2.png)
+
+Make a POST request to http://localhost:8093/api/upload-multiple with form-data body. The key must be `files` and the value must be a file with type of `jpeg,png,jpg,gif,svg` and not exceed 2 MB, then specify `folder_name` that you want to save the file in. Optionally, you can specify `prefix` to add prefix to the file name.
 
 ## Setup
 

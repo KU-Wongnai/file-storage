@@ -24,3 +24,5 @@ Route::get('/', function () {
 });
 
 Route::post('/upload', [FileController::class, 'saveFile']);
+
+Route::post('/upload-multiple', [FileController::class, 'saveMultipleFiles']);
