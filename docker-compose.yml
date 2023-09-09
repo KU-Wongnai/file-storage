@@ -1,5 +1,5 @@
 services:
-    laravel.test:
+    file_storage_server:
         build:
             context: ./vendor/laravel/sail/runtimes/8.2
             dockerfile: Dockerfile
@@ -21,6 +21,7 @@ services:
             - ".:/var/www/html"
         networks:
             - sail
+            - user-service_sail
         # depends_on:
         # - mysql
     # mysql:
@@ -50,6 +51,8 @@ services:
 networks:
     sail:
         driver: bridge
+    user-service_sail:
+        external: true
 volumes:
     sail-mysql:
         driver: local
